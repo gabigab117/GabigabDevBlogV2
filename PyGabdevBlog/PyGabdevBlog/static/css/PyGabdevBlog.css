@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+
+.template-homepage {
+    background-color: #fef6e4;
+    font-family: 'Fira Code', monospace;
+    color: #001858;
+
+}
+
+.template-homepage .button {
+    background-color: #f582ae;
+    color: #001858;
+    border-radius: 10px;
+}
+
+.template-homepage .search {
+    border-radius: 10px;
+    border-style: none;
+}
+
+.template-homepage .custom {
+    background-color: #f3d2c1;
+}
+
+.template-homepage a {
+    color: #001858;
+    text-decoration: none;
+}
+
+.template-homepage a:hover {
+    color: #ff8906;
+
+}

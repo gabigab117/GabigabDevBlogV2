@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ page.title }}</h1>
+
+    {{ page.intro|richtext }}
+</div>
+
+<div class="container">
+    <div class="row">
+    {% for post in blogpages %}
+
+
+<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 2rem;">
+     <a href="{% pageurl post %}">
+
+         <h2>{{ post.title }}</h2>
+   <p>{{ post.specific.intro|richtext }}</p>
+  <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
+
+     </a>
+
+
+</div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
