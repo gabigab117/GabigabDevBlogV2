@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 
 .template-homepage {
-    background-color: #fef6e4;
+    background-color: #fffffe;
     font-family: 'Fira Code', monospace;
-    color: #001858;
+    color: #2d334a;
 
 }
 
 .template-homepage .button {
-    background-color: #f582ae;
-    color: #001858;
+    background-color: #ffd803;
+    color: #272343;
     border-radius: 10px;
 }
 
@@ -19,15 +19,15 @@
 }
 
 .template-homepage .custom {
-    background-color: #f3d2c1;
+    background-color: #bae8e8;
 }
 
 .template-homepage a {
-    color: #001858;
+    color: #272343;
     text-decoration: none;
 }
 
 .template-homepage a:hover {
-    color: #ff8906;
+    color: #078080;
 
 }

@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -47,6 +50,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "wagtailcodeblock",
+    "contact",
+    "wagtailcaptcha",
+    "captcha",
 ]
 
 MIDDLEWARE = [
@@ -169,3 +175,17 @@ WAGTAILADMIN_BASE_URL = "http://example.com"
 
 # Block Code
 WAGTAIL_CODE_BLOCK_THEME = 'solarizedlight'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_ID')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PW')
+
+
+# Google recaptcha
+RECAPTCHA_PUBLIC_KEY = str(os.environ.get('RECAPTCHA_PUBLIC_KEY'))
+RECAPTCHA_PRIVATE_KEY = str(os.environ.get('RECAPTCHA_PRIVATE_KEY'))
+NOCAPTCHA = True
