@@ -3,7 +3,7 @@
 .template-homepage {
     background-color: #fffffe;
     font-family: 'Fira Code', monospace;
-    color: #2d334a;
+    color: Black;
 
 }
 
@@ -19,7 +19,7 @@
 }
 
 .template-homepage a {
-    color: #272343;
+    color: Black;
     text-decoration: none;
 }
 
