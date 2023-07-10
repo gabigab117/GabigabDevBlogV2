@@ -42,9 +42,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" aria-current="page" href="#">Blog</a>
+        <a class="nav-link" aria-current="page" href="{% slugurl 'index-du-blog' %}">Blog</a>
         <a class="nav-link" href="#">Projets</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="{% slugurl 'formulaire-de-contact' %}">Contact</a>
+          <a class="nav-link" aria-current="page" href="{% url 'search' %}">Rechercher</a>
+          <a class="nav-link" href="https://twitter.com/GabrielTrouve" target="_blank"><img src="http://127.0.0.1:8000/static/other/twitter.png" width="25" height="auto"></a>
       </div>
     </div>
   </div>

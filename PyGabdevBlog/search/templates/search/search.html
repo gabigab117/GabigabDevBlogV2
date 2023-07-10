@@ -10,8 +10,8 @@
 <h1>Rechercher un article</h1>
 
 <form action="{% url 'search' %}" method="get" style="margin-bottom: 5rem;">
-    <input type="text" name="query"{% if search_query %} value="{{ search_query }}"{% endif %} class="search">
-    <input type="submit" value="Search" class="button">
+    <input type="text" name="query"{% if search_query %} value="{{ search_query }}"{% endif %} class="form-control-sm">
+    <input type="submit" value="Rechercher" class="btn btn-success">
 </form>
 
 {% if search_results %}

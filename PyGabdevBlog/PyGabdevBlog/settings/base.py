@@ -23,6 +23,14 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = os.environ.get('DEBUG')
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
+# SECURITY WARNING: define the correct hosts in production!
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
 
 # Application definition
 
@@ -53,6 +61,7 @@ INSTALLED_APPS = [
     "contact",
     "wagtailcaptcha",
     "captcha",
+    "projects",
 ]
 
 MIDDLEWARE = [
@@ -189,3 +198,4 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PW')
 RECAPTCHA_PUBLIC_KEY = str(os.environ.get('RECAPTCHA_PUBLIC_KEY'))
 RECAPTCHA_PRIVATE_KEY = str(os.environ.get('RECAPTCHA_PRIVATE_KEY'))
 NOCAPTCHA = True
+
