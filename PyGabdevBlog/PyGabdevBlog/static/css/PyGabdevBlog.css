@@ -18,11 +18,12 @@
     background-color: #bae8e8;
 }
 
-.template-homepage a {
-    color: Black;
+.template-homepage a:not(.btn):not(.navbar-brand):not(.nav-link) {
+    color: Green;
     text-decoration: none;
 }
 
-.template-homepage a:hover {
-    color: #078080;
+.template-homepage .nav-link {
+    color: Black;
+    text-decoration: none;
 }

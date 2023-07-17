@@ -18,13 +18,14 @@
 
 
 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 2rem;">
-     <a href="{% pageurl post %}">
+
 
          <h2>{{ post.title }}</h2>
    <p>{{ post.specific.intro|richtext }}</p>
   <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
 
-     </a>
+
+    <a href="{% pageurl post %}" class="btn btn-success btn-sm">Lire la suite</a>
 
 
 </div>
