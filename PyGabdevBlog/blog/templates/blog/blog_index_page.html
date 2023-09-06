@@ -17,15 +17,18 @@
         {% for post in blogpages %}
 
 
-        <div class="col-12" style="margin-bottom: 4rem;">
+        <div class="col-12" style="margin-bottom: 2rem;">
 
-
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.specific.intro|richtext }}</p>
-            <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
-
-
-            <a href="{% pageurl post %}" class="btn btn-success btn-sm">Lire la suite</a>
+            <div class="card">
+                <div class="card-header">
+                    <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.specific.intro|richtext }}</p>
+                    <a href="{% pageurl post %}" class="btn btn-success btn-sm">Lire la suite</a>
+                </div>
+            </div>
 
 
         </div>
