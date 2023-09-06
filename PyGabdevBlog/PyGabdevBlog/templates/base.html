@@ -2,69 +2,74 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>
-            {% block title %}
-            {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
-            {% endblock %}
-            {% block title_suffix %}
-            {% wagtail_site as current_site %}
-            {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
-            {% endblock %}
-        </title>
-        {% if page.search_description %}
-        <meta name="description" content="{{ page.search_description }}" />
-        {% endif %}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {# Force all links in the live preview panel to be opened in a new tab #}
-        {% if request.in_preview_panel %}
-        <base target="_blank">
-        {% endif %}
-
-        {# Global stylesheets #}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/PyGabdevBlog.css' %}">
-
-        {% block extra_css %}
-        {# Override this in templates to add extra stylesheets #}
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
         {% endblock %}
-    </head>
-    <header>
+        {% block title_suffix %}
+        {% wagtail_site as current_site %}
+        {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+        {% endblock %}
+    </title>
+    {% if page.search_description %}
+    <meta name="description" content="{{ page.search_description }}"/>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<nav class="navbar navbar-expand-lg custom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% slugurl 'index' %}">PyGabDev</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" aria-current="page" href="{% slugurl 'index-du-blog' %}">Blog</a>
-        <a class="nav-link" href="{% slugurl 'mes-projets' %}">Projets</a>
-        <a class="nav-link" href="{% slugurl 'formulaire-de-contact' %}">Contact</a>
-          <a class="nav-link" aria-current="page" href="{% url 'search' %}">Rechercher</a>
-          <a class="nav-link" href="https://twitter.com/GabrielTrouve" target="_blank"><img src="http://gabrieltrouve.fr/static/other/twitter.png" width="25" height="auto"></a>
-      </div>
-    </div>
-  </div>
-</nav>
+    {# Force all links in the live preview panel to be opened in a new tab #}
+    {% if request.in_preview_panel %}
+    <base target="_blank">
+    {% endif %}
+
+    {# Global stylesheets #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PyGabdevBlog.css' %}">
+
+    {% block extra_css %}
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+</head>
+<header>
+
+    <nav class="navbar navbar-expand-lg custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% slugurl 'index' %}">PyGabDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="{% slugurl 'index-du-blog' %}">Blog</a>
+                    <a class="nav-link" href="{% slugurl 'mes-projets' %}">Projets</a>
+                    <a class="nav-link" href="{% slugurl 'formulaire-de-contact' %}">Contact</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'search' %}">Rechercher</a>
+                    <a class="nav-link" href="https://twitter.com/GabrielTrouve" target="_blank"><img
+                            src="http://gabrieltrouve.fr/static/other/twitter.png" width="25" height="auto"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 </header>
 
-    <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
+<body class="{% block body_class %}{% endblock %}">
+{% wagtailuserbar %}
 
-        {% block content %}{% endblock %}
+{% block content %}{% endblock %}
 
-        {# Global javascript #}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="{% static 'js/PyGabdevBlog.js' %}"></script>
+{# Global javascript #}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/PyGabdevBlog.js' %}"></script>
 
-        {% block extra_js %}
-        {# Override this in templates to add extra javascript #}
-        {% endblock %}
-    </body>
+{% block extra_js %}
+{# Override this in templates to add extra javascript #}
+{% endblock %}
+</body>
 </html>

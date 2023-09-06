@@ -14,22 +14,22 @@
 
 <div class="container">
     <div class="row">
-    {% for post in blogpages %}
+        {% for post in blogpages %}
 
 
-<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 2rem;">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 2rem;">
 
 
-         <h2>{{ post.title }}</h2>
-   <p>{{ post.specific.intro|richtext }}</p>
-  <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.specific.intro|richtext }}</p>
+            <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
 
 
-    <a href="{% pageurl post %}" class="btn btn-success btn-sm">Lire la suite</a>
+            <a href="{% pageurl post %}" class="btn btn-success btn-sm">Lire la suite</a>
 
 
-</div>
-    {% endfor %}
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
