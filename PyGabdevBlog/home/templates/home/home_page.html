@@ -10,7 +10,11 @@
 
 {% block content %}
 <div class="container">
-    {{ page.body|richtext }}
+    <div class="row">
+        <div class="col-12">
+            {{ page.body|richtext }}
+        </div>
+    </div>
 </div>
 
 <a href="https://twitter.com/GabrielTrouve?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow

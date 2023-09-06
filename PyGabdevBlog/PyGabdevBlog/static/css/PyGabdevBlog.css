@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 
 .template-homepage {
-    background-color: #fffffe;
+    background-color: #FDF5E6;
     font-family: 'Fira Code', monospace;
     color: Black;
 
@@ -15,7 +15,7 @@
 
 
 .template-homepage .custom {
-    background-color: #bae8e8;
+    background-color: Cornsilk;
 }
 
 .template-homepage a:not(.btn):not(.navbar-brand):not(.nav-link) {
@@ -31,4 +31,18 @@
 img {
   display: block;
   margin: auto;
+}
+
+body {
+    text-align: justify;
+}
+
+/* Cibler les éléments impairs (1, 3, 5, etc.) et appliquez une couleur différente */
+.card.odd {
+    background-color: White;
+}
+
+/* Cibler les éléments pairs (2, 4, 6, etc.) et appliquez une autre couleur */
+.card.even {
+    background-color: White;
 }

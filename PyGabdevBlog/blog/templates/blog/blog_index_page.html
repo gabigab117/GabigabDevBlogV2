@@ -19,7 +19,7 @@
 
         <div class="col-12" style="margin-bottom: 2rem;">
 
-            <div class="card">
+            <div class="card {% if forloop.counter|divisibleby:2 %}even{% else %}odd{% endif %}">
                 <div class="card-header">
                     <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
                 </div>
