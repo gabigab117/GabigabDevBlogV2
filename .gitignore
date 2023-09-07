@@ -150,6 +150,8 @@ PyGabdevBlog/media/original_images/*.jpg
 PyGabdevBlog/media/avatar_images/*.png
 PyGabdevBlog/media/images/*.png
 PyGabdevBlog/media/original_images/*.png
+PyGabdevBlog/media/images/*.webp
+PyGabdevBlog/media/original_images/*.webp
 
 # PyCharm
 #  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can
