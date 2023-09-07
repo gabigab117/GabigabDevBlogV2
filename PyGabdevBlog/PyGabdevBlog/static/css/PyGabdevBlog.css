@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .template-homepage {
     background-color: #FDF5E6;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Montserrat', monospace;
     color: Black;
+    font-size: 1.1rem;
 
 }
 
@@ -17,6 +18,7 @@
 .template-homepage .custom {
     background-color: Cornsilk;
     margin-bottom: 30px;
+    font-size: 1.3rem;
 }
 
 .template-homepage a:not(.btn):not(.navbar-brand):not(.nav-link) {
