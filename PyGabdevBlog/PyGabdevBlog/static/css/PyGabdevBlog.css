@@ -2,6 +2,7 @@
 
 .template-homepage {
     background-color: #FDF5E6;
+
     font-family: 'Montserrat', monospace;
     color: Black;
     font-size: 1.1rem;
@@ -16,7 +17,7 @@
 
 
 .template-homepage .custom {
-    background-color: Cornsilk;
+    background: linear-gradient(#D2B48C, #FDF5E6);
     margin-bottom: 30px;
     font-size: 1.3rem;
 }
