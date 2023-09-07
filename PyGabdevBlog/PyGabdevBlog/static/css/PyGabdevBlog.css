@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .template-homepage {
-    background-color: #FDF5E6;
+    background-color: #FFFAF6;
 
     font-family: 'Montserrat', monospace;
     color: Black;
@@ -17,7 +17,8 @@
 
 
 .template-homepage .custom {
-    background: linear-gradient(#D2B48C, #FDF5E6);
+    background-color: #FFC4C4;
+    background: linear-gradient(#FFDFC4, #FFFAF6);
     margin-bottom: 30px;
     font-size: 1.3rem;
 }
