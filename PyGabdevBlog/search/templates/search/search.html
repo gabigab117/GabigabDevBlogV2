@@ -7,37 +7,47 @@
 
 {% block content %}
 <div class="container">
-<h1>Rechercher un article</h1>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Rechercher un article</h1>
 
-<form action="{% url 'search' %}" method="get" style="margin-bottom: 5rem;">
-    <input type="text" name="query"{% if search_query %} value="{{ search_query }}"{% endif %} class="form-control-sm">
-    <input type="submit" value="Rechercher" class="btn btn-success">
-</form>
+                    <form action="{% url 'search' %}" method="get" style="margin-bottom: 5rem;">
+                        <input type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}
+                               class="form-control-sm">
+                        <input type="submit" value="Rechercher" class="btn btn-success">
+                    </form>
 
-{% if search_results %}
+                    {% if search_results %}
 
-    {% for result in search_results %}
-  <div class="list-group">
+                    {% for result in search_results %}
+                    <div class="list-group">
 
-        <a href="{% pageurl result %}" class="list-group-item list-group-item-action">{{ result }}</a>
-      <div class="d-flex w-100 justify-content-between">
-        {% if result.search_description %}
-        <h5 class="mb-1">{{ result.search_description }}</h5>
-          </div>
-        {% endif %}
-  </div>
-    {% endfor %}
+                        <a href="{% pageurl result %}" class="list-group-item list-group-item-action">{{ result }}</a>
+                        <div class="d-flex w-100 justify-content-between">
+                            {% if result.search_description %}
+                            <h5 class="mb-1">{{ result.search_description }}</h5>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
 
 
-{% if search_results.has_previous %}
-<a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}">Previous</a>
-{% endif %}
+                    {% if search_results.has_previous %}
+                    <a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}">Previous</a>
+                    {% endif %}
 
-{% if search_results.has_next %}
-<a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}">Next</a>
-{% endif %}
-{% elif search_query %}
-Résultat non trouvé
-{% endif %}
+                    {% if search_results.has_next %}
+                    <a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}">Next</a>
+                    {% endif %}
+                    {% elif search_query %}
+                    Résultat non trouvé
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
