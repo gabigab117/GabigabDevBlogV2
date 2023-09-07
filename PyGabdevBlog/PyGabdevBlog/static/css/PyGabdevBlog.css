@@ -16,6 +16,7 @@
 
 .template-homepage .custom {
     background-color: Cornsilk;
+    margin-bottom: 30px;
 }
 
 .template-homepage a:not(.btn):not(.navbar-brand):not(.nav-link) {
