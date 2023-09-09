@@ -51,3 +51,22 @@ body {
 .card.even {
     background-color: White;
 }
+
+/* Style du formulaire */
+form {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style des labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #007bff; /* Couleur bleue au focus */
+    outline: none; /* Supprimer la bordure par défaut du navigateur */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre légère au focus */
+}
