@@ -36,6 +36,7 @@
 img {
   display: block;
   margin: auto;
+  /* avec max-width comme ça les images ne sont jamais plus large que l'élément parent  */
   max-width: 100%;
   height: auto;
 }

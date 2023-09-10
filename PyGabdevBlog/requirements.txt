@@ -21,6 +21,7 @@ l18n==2021.3
 mysqlclient==2.2.0
 openpyxl==3.1.2
 Pillow==9.5.0
+pillow-heif==0.13.0
 python-dotenv==1.0.0
 python-environ==0.4.54
 pytz==2023.3
@@ -31,8 +32,8 @@ sqlparse==0.4.4
 telepath==0.3.1
 tzdata==2023.3
 urllib3==2.0.3
-wagtail==5.0.2
+wagtail==5.1.1
 wagtail-django-recaptcha==1.0
 wagtailcodeblock==1.29.0.0
 webencodings==0.5.1
-Willow==1.5
+Willow==1.6.2
