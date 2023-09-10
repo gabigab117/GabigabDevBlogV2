@@ -36,6 +36,8 @@
 img {
   display: block;
   margin: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -69,4 +71,8 @@ input:focus, textarea:focus {
     border: 1px solid #007bff; /* Couleur bleue au focus */
     outline: none; /* Supprimer la bordure par défaut du navigateur */
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre légère au focus */
+}
+
+textarea {
+    max-width: 100%;
 }
