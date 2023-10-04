@@ -59,9 +59,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "wagtailcodeblock",
-    "wagtailcaptcha",
     "captcha",
     "projects",
+    "contact",
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -204,11 +206,18 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env('EMAIL_ID')
 EMAIL_HOST_PASSWORD = env('EMAIL_PW')
 
+DEFAULT_FROM_EMAIL = 'noreply<gabrieltrouve5@gmail.com>'
+
 
 # Google recaptcha
 RECAPTCHA_PUBLIC_KEY = env('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = env('RECAPTCHA_PRIVATE_KEY')
 NOCAPTCHA = True
+
+
+# Crispy
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 if env("ENV_TYPE") == "PROD":

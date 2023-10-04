@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static wagtailcore_tags %}
+
+{% block title %}Contact{% endblock %}
+
+{% block header %}Contact{% endblock %}
+
+{% block content %}
+
+
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+
+                <div class="my-5">
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+
+                    <input type="submit" value="Envoyer">
+                </form>
+                    {% if messages %}
+                    {% for message in messages %}
+                   <h5 style="color: green;"> {{ message }}</h5>
+                    {% endfor %}
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
