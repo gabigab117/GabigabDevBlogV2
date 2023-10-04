@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "wagtailcodeblock",
-    "contact",
     "wagtailcaptcha",
     "captcha",
     "projects",
