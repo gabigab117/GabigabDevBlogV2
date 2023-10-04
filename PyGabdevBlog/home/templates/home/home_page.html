@@ -8,21 +8,22 @@
 
 {% endblock extra_css %}
 
-{% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    {{ page.body|richtext }}
-                </div>
-            </div>
+{% block header %}{{ page.title|richtext }}{% endblock %}
+{% block subheader %}{{ page.subtitle|richtext }}{% endblock %}
 
+
+{% block content %}
+
+
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                {{ page.body|richtext }}
+            </div>
         </div>
     </div>
-</div>
+</main>
 
-<a href="https://twitter.com/GabrielTrouve?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow
-    @GabrielTrouve</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endblock content %}
