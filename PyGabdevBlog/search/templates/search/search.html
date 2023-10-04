@@ -12,13 +12,13 @@
 
 <!-- Main Content-->
 <main class="mb-4">
-    <div class="container px-4 px-lg-5">
-        <div class="row">
+    <div class="container">
+        <div class="row justify-content-center">
             <div class="col-12">
 
                 <div class="my-5">
 
-                    <form action="{% url 'search' %}" method="get" style="margin-bottom: 5rem;">
+                    <form action="{% url 'search' %}" method="get" style="margin-bottom: 5rem;" class="text-center">
                         <input type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}
                                class="form-control-sm">
                         <input type="submit" value="Rechercher" class="btn btn-success">
