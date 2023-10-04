@@ -10796,3 +10796,11 @@ header.masthead .post-heading .meta a {
     font-size: 2.25rem;
   }
 }
+
+.col-12 img {
+    display: block;
+  margin: auto;
+  max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas la largeur de la colonne */
+  height: auto;
+  border-radius: 10px;
+}

@@ -3,45 +3,37 @@
 {% load wagtailcore_tags %}
 {% load wagtailcore_tags wagtailimages_tags %}
 
-{% block body_class %}template-homepage{% endblock %}
+
+
+{% block header %}{{ page.title|richtext }}{% endblock %}
 
 {% block content %}
-<div class="container" style="margin-bottom:30px;">
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h1>{{ page.title }}</h1>
 
-                    {{ page.intro|richtext }}
-                </div>
-            </div>
 
-        </div>
-    </div>
-</div>
-
-<div class="container">
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
     <div class="row">
         {% for post in blogpages %}
-
-
-        <div class="col-12" style="margin-bottom: 2rem;">
-
-            <div class="card {% if forloop.counter|divisibleby:2 %}even{% else %}odd{% endif %}">
-                <div class="card-header">
-                    <i>Le {{ post.specific.date }} par {{ post.owner }}</i>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
-                    <p class="card-text">{{ post.specific.intro|richtext }}</p>
-                    <a href="{% pageurl post %}" class="btn btn-success btn-sm">Lire la suite</a>
-                </div>
+        <div class="col-12">
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="{% pageurl post %}">
+                    <h2 class="post-title">{{ post.title }}</h2>
+                    <h3 class="post-subtitle">{{ post.specific.intro|richtext }}</h3>
+                </a>
+                <p class="post-meta">
+                    Par
+                    {{ post.owner }}
+                    le {{ post.specific.date }}
+                </p>
             </div>
-
+            <!-- Divider-->
+            <hr class="my-4"/>
 
         </div>
         {% endfor %}
     </div>
 </div>
+
+
 {% endblock %}
