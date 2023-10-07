@@ -60,7 +60,7 @@
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contact' %}">Contact</a>
                 </li>
                 {% if request.user.is_superuser %}
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'wagtailadmin_home' %}">Administration</a>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'admin:index' %}">Administration</a>
                 </li>
                 {% endif %}
             </ul>
